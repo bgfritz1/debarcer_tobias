@@ -1,0 +1,18 @@
+*.aux
+*.log
+*~
+
+# ignore output files
+data/
+*.tally
+*.vcf
+*.regions
+*.posns
+*.cons
+
+# ignore tests (internal for now)
+*.test
+config/working.ini
+
+# ignore editor artifacts
+*.swp
