@@ -16,7 +16,7 @@ module load tools anaconda3/4.4.0
 
 #Make plots 
 
-python /home/projects/ku_10025/apps/debarcer/debarcer/utils/generate_plots.py -c ./out/chr1\:4776044-4780817.cons -o ./out
+python /home/projects/ku_10025/apps/debarcer_tobias/debarcer/utils/generate_plots.py -c ./out/chr1\:4776044-4780817.cons -o ./out
 
 
 
