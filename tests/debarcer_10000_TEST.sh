@@ -12,9 +12,11 @@ python /home/projects/ku_10025/apps/debarcer_tobias/debarcer/debarcer.py collaps
 
 
 #Call VCFs
-python /home/projects/ku_10025/apps/debarcer_tobias/debarcer/debarcer.py call -o /home/projects/ku_10025/apps/debarcer_tobias/tests/out -r chr1:4776044-4780817 -f 1,2,5 -cf ./out/chr1:4776044-4780817.cons  
+python /home/projects/ku_10025/apps/debarcer_tobias/debarcer/debarcer.py call -o /home/projects/ku_10025/apps/debarcer_tobias/tests/out -r chr1:4776044-4780817 -f 1,2,5 -cf ./out/chr1:4776044-4780817.cons -c /home/projects/ku_10025/apps/debarcer_tobias/config/tim_config.ini 
 
+#Make plots 
 
+python /home/projects/ku_10025/apps/debarcer_tobias/debarcer/utils/generate_plots.py -c ./out/chr1\:4776044-4780817.cons -o ./out
 
 
 

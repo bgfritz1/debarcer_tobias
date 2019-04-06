@@ -23,9 +23,9 @@ def tally_output(cons_file, output_path, file_stem):
 
 def generate_df(tally_file):
 	"""Builds a pandas DataFrame from the given tally_file."""
-
+	
 	df = pd.read_csv(tally_file, sep='\t')
-	df.columns = ['chr', 'base_pos', 'A', 'C', 'G', 'T', 'I', 'D', 'N', 'raw_dp', 'cons_dp', 'f_size', 'ref_freq']
+	df.columns = ['chr', 'base_pos','ref', 'A', 'C', 'G', 'T', 'I', 'D', 'N', 'raw_dp', 'cons_dp', 'f_size', 'ref_freq']
 
 	return df
 
@@ -83,6 +83,7 @@ def generate_plots(cons_file, output_path):
 	tally_file = tally_output(cons_file, output_path, file_stem)
 	df = generate_df(tally_file)
 	graph_depth(df, output_path, file_stem)
+	
 
 
 if __name__ == '__main__':
