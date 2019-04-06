@@ -83,7 +83,7 @@ def generate_plots(cons_file, output_path):
 	tally_file = tally_output(cons_file, output_path, file_stem)
 	df = generate_df(tally_file)
 	graph_depth(df, output_path, file_stem)
-	graph_ref_freq(df, output_path, file_stem)
+	
 
 
 if __name__ == '__main__':
