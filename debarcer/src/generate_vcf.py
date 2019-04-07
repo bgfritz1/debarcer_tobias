@@ -26,7 +26,7 @@ def parse_raw_table(cons_file, f_sizes):
             elif f_size in f_sizes:
                 
                 rows[f_size].append(line)
-        rows        
+                
     return rows
 
 
