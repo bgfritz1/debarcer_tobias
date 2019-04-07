@@ -18,7 +18,7 @@ def parse_raw_table(cons_file, f_sizes):
         f_size = 0
 
         for line in reader:
-
+            
             if line.startswith('#'):
                 
                 f_size = line.split('\t')[11]
@@ -26,7 +26,7 @@ def parse_raw_table(cons_file, f_sizes):
             elif f_size in f_sizes:
                 
                 rows[f_size].append(line)
-
+                
     return rows
 
 
