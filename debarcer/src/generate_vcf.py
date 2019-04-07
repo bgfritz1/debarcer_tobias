@@ -20,6 +20,7 @@ def parse_raw_table(cons_file, f_sizes):
         for line in reader:
 
             if line.startswith('#'):
+                print(line)
                 f_size = line.split('\t')[11]
 
             elif f_size in f_sizes:
