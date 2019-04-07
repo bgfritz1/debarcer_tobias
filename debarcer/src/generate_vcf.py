@@ -121,9 +121,11 @@ def generate_vcf_output(cons_file, f_sizes, contig, region_start, region_end, ou
 
     ## Get reference sequence for the region 
     ref_seq = get_ref_seq(contig, region_start, region_end, config)
+    print(ref_seq)
 
     ## Parse table to extract VCF events
     cons_data = parse_raw_table(cons_file, f_sizes)
+    print(cons_data)
 
     ## Generate vcf files
     for f_size in f_sizes:
