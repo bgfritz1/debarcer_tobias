@@ -20,11 +20,11 @@ def parse_raw_table(cons_file, f_sizes):
         for line in reader:
 
             if line.startswith('#'):
-                print(line)
+                
                 f_size = line.split('\t')[11]
 
             elif f_size in f_sizes:
-                print(line)
+                
                 rows[f_size].append(line)
 
     return rows
@@ -52,7 +52,7 @@ def write_rows(cons_data, f_size, contig, region_start, region_end, output_path,
         writer.write("#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\tFORMAT\tSAMPLE\n")
         
         for row in cons_data[f_size]:
-            print(row)
+            
             writer.write(row)
 
 
