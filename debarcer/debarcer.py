@@ -217,6 +217,7 @@ if __name__ == '__main__':
 	c_parser.add_argument('-r', '--region', help='Region to analyze (string of the form chrX:posA-posB).', required=True)
 	c_parser.add_argument('-b', '--bam_file', help='Path to your BAM file.')
 	c_parser.add_argument('-u', '--umi_file', help='Path to your .umis file.')
+	c_parser.add_argument('-ref', '--reference_file', help='Path to your reference sequence')
 	c_parser.add_argument('-c', '--config', help='Path to your config file.')
 	c_parser.add_argument('-f', '--f_sizes', help='Comma-separated list of family sizes to collapse on.') ##implement
 	c_parser.set_defaults(func=collapse)
