@@ -89,7 +89,7 @@ def group_umis(args):
 		bam_file=bam_file,
 		config=config)
 
-	umi_file = "{}/{}.umis".format(output_path, region)
+	umi_file = "{}/{}.umis".format(output_path, bam_file)
 	pickle.dump(umi_families, open(umi_file, "wb"))
 
 	print(timestamp() + "UMI grouping complete. Output written to {}.".format(output_path))
