@@ -62,8 +62,8 @@ def graph_ref_freq(df, output_path, file_stem):
 	base_pos_max = max(df['base_pos'])
 	base_pos_step = int((base_pos_max - base_pos_min) / 10)
 
-	for x in range(base_pos_min, base_pos_max, base_pos_step):
-		print(x)
+	#for x in range(base_pos_min, base_pos_max, base_pos_step):
+	#	print(x)
 
 	plot = ggplot(aes('base_pos', 'ref_freq'), data=df) + \
 		geom_bar(aes(colour='f_size')) + \
