@@ -51,7 +51,7 @@ def graph_depth(df, output_path, file_stem):
 		ylab("Depth")
 
 	plot.save(plot_file)
-
+	
 
 def graph_ref_freq(df, output_path, file_stem):
 	"""A plot of base position vs. reference frequency, faceted by family size."""
@@ -66,14 +66,12 @@ def graph_ref_freq(df, output_path, file_stem):
 		print(x)
 
 	plot = ggplot(aes('base_pos', 'ref_freq'), data=df) + \
-		geom_bar() + \
+		geom_bar(aes(colour='f_size')) + \
 		facet_wrap('f_size', ncol=1) + \
-		scale_x_continuous(breaks=range(base_pos_min, base_pos_max, base_pos_step)) + \
-		scale_y_continuous(breaks=[0.0, 25.0, 50.0, 75.0, 100.0]) + \
 		xlab("Base Position") + \
 		ylab("Reference Frequency (%)")
 
-	plot.save(plot_file)
+plot.save(plot_file)
 
 
 def generate_plots(cons_file, output_path):
